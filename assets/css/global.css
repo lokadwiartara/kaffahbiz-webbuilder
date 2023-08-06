@@ -1,0 +1,287 @@
+
+
+div.user_form input#remember{
+	margin:0 10px 0 0;
+}
+
+div.user_form textarea{
+	width:70%;
+	height:60px;
+	vertical-align: top;
+	padding: 10px;
+}
+
+div.user_form h4.blockheader{
+	margin: 30px 0 10px 0;
+	padding:0;
+	font-size: 18px;
+}
+
+form#listcart{
+    background: none;
+    border:none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+a.delcart{
+    background: url(http://www.kaffah.biz/template/front/coolblue/images/deletecart.png) no-repeat center center;
+    display: block;
+    width: 50px;
+    height: 29px;
+}
+
+input.qtyinput{
+     margin:0;
+    padding: 5px;
+    width: 40px;   
+    border:1px solid #ccc;    
+}
+
+input.jnetax{
+     margin:0;
+    padding: 5px;
+    width: 200px;   
+    border:1px solid #ccc;
+}
+
+.jnelisttax{
+    display: none;
+    text-align: left;
+    padding: 0;
+    border:1px solid #ccc;
+    width: 210px;
+    margin:-2px 0 0 342px;
+    position: absolute;
+    background: #fff;
+}
+
+.trtaxdetail{
+    display: none;
+}
+
+.jnelisttax ul{
+    list-style-type: none;
+    margin:0;
+    overflow-y: scroll;
+    
+    height: 200px;
+    padding:0;
+}
+
+.jnelisttax ul li{
+    margin:0;
+    padding:5px 10px;
+    cursor: pointer;
+}
+
+.jnelisttax ul li:hover{
+    background: #eee;
+}
+
+.jnetaxdetail{
+    display: none;
+    margin: 0;
+    border:none;
+    text-align: center;
+}
+
+
+.tax_the_city{
+    border:3px solid #ccc;
+    width: 90%;
+    margin:0 auto 20px auto;
+}
+
+#shopping_cart td{
+	text-align: left;
+}
+
+
+input.bigbtn{
+	margin:30px 0 0 0 !important;
+	padding:15px 25px;
+    background: #dfdfdf;
+    color: #000;
+    border:1px solid #aaa;
+}
+
+img.image_product{
+    padding: 8px;
+    float: left;
+    margin:0 13px 0 0;
+}
+
+h5.name_product{
+	margin:10px 0 0 0;
+	font-weight: bold;
+	padding: 0;
+	font-size: 14px;
+}
+
+p.desc_product{
+
+}
+
+
+.check_transaction, .user_form{
+    border:1px solid #eee;
+    padding: 20px 30px 20px 30px;
+    margin:20px 0 20px 0;
+}
+
+.check_transaction form, .user_form form{
+    background: none;
+    border:none;
+    padding:0;
+    width:100%;
+}
+
+.check_transaction label.label, .user_form label.label{
+    display: inline-block;
+    width:150px;    
+    margin:0;
+}
+
+
+.check_transaction label.option, .user_form label.option{
+    display: inline-block;
+    padding:10px 0 10px 0;
+    margin:0 10px 0 0;
+}
+
+.check_transaction input[type=text], .check_transaction input[type=password], .user_form input[type=text], .user_form input[type=password]{
+    width:430px;
+    margin:5px 0 ;
+}
+
+
+.check_transaction input[type=radio], .check_transaction input[type=checkbox], .user_form input[type=radio], .user_form input[type=checkbox]{
+    padding: 0;
+    margin:0 5px 0 0px;
+}
+
+.check_transaction textarea, .user_form textarea{
+    width:430px;
+    vertical-align: middle;
+    height: 100px;
+    margin:8px 0 8px 0;
+}
+
+
+
+table#transaction_table{
+    width: 100%;
+}
+
+table tr td{
+    
+}
+
+div.payment{
+    margin:0 0 40px 0;
+}
+
+div.module p.modulehead{
+    margin: 0 0 10px 0;
+}
+
+div.payment p{
+    width:auto !important;
+    padding: 0;
+    line-height: 18px;
+}
+
+div.payment ul#media{
+    margin:0;
+    padding: 0;    
+}
+
+div.payment ul#media li{
+    list-style-type: none;
+    margin:0;
+    padding: 10px 0 10px 0;
+    border-top: 1px dashed  #dfdfdf;
+}
+
+div.payment ul#media li:first-child{
+    border-top: none;
+}
+
+div.cs ul#cs{
+    list-style-type: none;
+    margin:0;
+    padding: 0;    
+}
+
+div.cs ul#cs li{
+    padding: 5px 0 5px 0;
+}
+
+
+div.payment ul#media li  img,
+div.cs ul#cs li  img{
+    padding:0;
+    background: none;
+    margin:0 10px 0 0;
+    border:0;
+    box-shadow: none;
+    float: left;
+}
+
+
+th#transaction_detail{
+    width:40%;
+    text-align: left;
+}
+
+th#transaction_status{
+    width:15%;
+    text-align: center;
+}
+
+th#transaction_total{
+    width:25%;
+    text-align: right;
+}
+
+th#transaction_action{
+    width:20%;
+    text-align: center;
+}
+
+div.detail_transaction ul{
+    list-style-type: decimal;
+  	margin:0 !important;
+}
+
+div.detail_order_list{
+    display: none;
+}
+
+div.module ul.category_menu {
+    display: block;
+}
+
+
+ul.dash_menu{
+    list-style-type: none;
+}
+
+ul.dash_menu li{
+    float: left;
+}
+
+ul.dash_menu li a{
+    display: inline-block;  
+    color: #000;
+    padding:10px 20px;
+    border:1px solid #dfdfdf;
+    border-bottom: 4px solid #ddd;
+    margin: 0 10px 0 0px;
+    -moz-border-radius: 0 0 3px 3px;
+    -webkit-border-radius: 0 0 3px 3px;
+    border-radius: 0 0 3px 3px;
+}

@@ -1,0 +1,84 @@
+<div class="footer_bg">
+<div class="wrap">
+	<div class="footer">
+		<div class="span_of_4">
+			<div class="span1_of_4">
+				<h4>Seputar Kaffah.biz</h4>
+				<p><a href="http://www.kaffah.biz">Kaffah.biz</a> adalah salah satu karya besar founder <a href="http://www.cbs-bogor.net">Cyber Business School</a> (Yogi+Loka) <br /><br />Dipersembahkan untuk UKM yang sedang mencari media promosi online yang murah bahkan gratis</p>
+				<span>Alamat Workshop:</span>
+				
+  
+				
+				<p class="top"><b>Cyber Business School</b><br />Jl Raya Cifor, Rt.03 Rw. 08 Bubulak</p>
+				<p>(Depan Perum Griya Melati)</p>
+				<p>Bogor, Jawa Barat</p>
+				<div class="f_icons">
+						<ul>
+							<li><a class="icon1" href="https://www.facebook.com/kaffah.biz"></a></li>
+							<li><a class="icon2" href="https://www.twitter.com/kaffahbiz"></a></li>
+							<li><a class="icon3" href="https://plus.google.com/u/0/111369497477720921425"></a></li>
+
+						</ul>	
+				</div>
+			</div>
+			<div class="span1_of_4">
+				<h4>Posting Terbaru</h4>
+
+				<?php if(k_have_post($type='post','',3,array('bantuan', 'testimoni','tutorial_video'))): ?>
+						<?php foreach(k_post($type) as $post) :?>
+
+				<span><a href="<?php echo k_permalink($type, $post);?>"><?php echo k_title($post); ?></a></span>
+				<p><?php echo k_date($post, '%d %F %Y');?></p>
+
+				<?php endforeach;?>
+					<?php endif;?>
+			</div>
+			<div class="span1_of_4">
+				<h4>Tentang Kami</h4>
+				<span><a href="http://www.kaffah.biz/tentang_kami">Tentang Kami</a></span>
+				<span><a href="http://www.kaffah.biz/kontak_kami">Kontak Kami</a></span>
+				<span><a href="http://www.kaffah.biz/bantuan">Panduan Kaffah</a></span>
+				<span></span>
+				<h4>Partner Kaffah.biz</h4>
+				<span><a href="http://www.cbs-bogor.net" >Cyber Business School</a></span>
+				<p>Sekolahnya Para TeknoPreneur</p>
+				<span><a href="http://www.ilmuwebsite.com" rel="nofollow">Ilmu Website</a></span>
+				<p>Komunitas Berbagi Ilmu Website</p> 
+			</div>
+			<div class="span1_of_4">
+				<h4>Website Terbaru</h4>
+
+				<?php $newproduct = get_new_product(3); foreach($newproduct as $row){ $domain[] = $row->blog_id ; } ?>
+				<?php $domain = NULL;?>
+
+				<?php foreach(get_new_domain($domain) as $row):?>
+				<?php $unserial = unserialize(base64_decode($row->option_value));?>
+
+				<span><a href="http://<?php echo $unserial['website'];?>" target="_blank" class="sitename"><?php echo  $unserial['site_title'];  ?></a></span>
+				<p><?php echo str_replace('www.','',$unserial['website']);?></p>
+				
+				<?php endforeach;?>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="footer_top">
+			<div class="f_nav1">
+				<ul>
+					<li><a href="http://www.kaffah.biz">home</a></li>
+					<li><a href="http://www.kaffah.biz/fitur">fitur</a></li>
+					<li><a href="http://www.kaffah.biz/harga">paket berbayar</a></li>
+					<li><a href="http://www.kaffah.biz/artikel">blog</a></li>
+					<li><a href="http://www.kaffah.biz/market">Market</a></li>
+					<li><a href="http://www.kaffah.biz/kontak_kami">Kontak</a></li>
+				</ul>
+			</div>
+			<div class="copy">
+				<p class="link"><span>© PT Kaffah Gemilang . All rights reserved</span></p>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<?php echo get_template('dir/header',TRUE);?>
+
+<div class="main_bg inside">
+<div class="wrap">
+	<div class="main">
+		<div class="content">
+			<!-- start blog_left -->
+			<div class="blog_left">		
+
+
+				<div class="blog_main single  det_text">	
+					<div id="breadcrumbdir"><a href="http://www.kaffah.biz/">KaffahBiz</a> / <a href="http://www.kaffah.biz/dir/">Direktori</a> / <a href="http://www.kaffah.biz/dir/produk/">Produk</a></div>
+                    <h2><?php echo $this->template->dir->post_title ;?></h2>  
+                    <img src="<?php echo get_thumb($this->template->dir->post_image, 500, 500, 3);?>" class="bigthumb" />  
+                    <em class="price single"><b><?php echo 'Rp '.@number_format($this->template->dir->post_price,0,",",".");?></b></em>
+
+
+                   	<?php echo $this->template->dir->post_content;?>
+
+					<div class="social-sharing is-large" data-permalink="<?php echo base_url().'dir/produk/id/'.$this->template->dir->ID.'/'.$this->template->dir->post_name;?>">
+
+					    <!-- https://developers.facebook.com/docs/plugins/share-button/ -->
+					    <a target="_blank" href="http://www.facebook.com/sharer.php?u=<?php echo base_url().'dir/produk/id/'.$this->template->dir->ID.'/'.$this->template->dir->post_name;?>" class="share-facebook">
+					      <span class="icon icon-facebook" aria-hidden="true"></span>
+					      <span class="share-title">Share</span>
+					      <span class="share-count">0</span>
+					    </a>
+
+					    <!-- https://dev.twitter.com/docs/intents -->
+					    <a target="_blank" href="http://twitter.com/share?url=<?php echo base_url().'dir/produk/id/'.$this->template->dir->ID.'/'.$this->template->dir->post_name;?>&amp;text=<?php echo $this->template->dir->post_title;?>&amp;" class="share-twitter">
+					      <span class="icon icon-twitter" aria-hidden="true"></span>
+					      <span class="share-title">Tweet</span>
+					      <span class="share-count">0</span>
+					    </a>
+
+					    <!--
+					      https://developers.pinterest.com/pin_it/
+					      Pinterest get data from the same Open Graph meta tags Facebook uses
+					    -->
+					    <a target="_blank" href="http://pinterest.com/pin/create/button/?url=<?php echo base_url().'dir/produk/id/'.$this->template->dir->ID.'/'.$this->template->dir->post_name;?>&amp;media=<?php echo get_thumb(img_capture($this->template->dir->post_content), 180, 180, 3);?>&amp;description=<?php echo $this->template->dir->post_title;?>" class="share-pinterest">
+					      <span class="icon icon-pinterest" aria-hidden="true"></span>
+					      <span class="share-title">Pin it</span>
+					      <span class="share-count">0</span>
+					    </a>
+
+					    <!-- https://developers.google.com/+/web/share/ -->
+					    <a target="_blank" href="http://plus.google.com/share?url=<?php echo base_url().'dir/produk/id/'.$this->template->dir->ID.'/'.$this->template->dir->post_name;?>" class="share-google">
+					      <!-- Cannot get Google+ share count with JS yet -->
+					      <span class="icon icon-google" aria-hidden="true"></span>
+					      <span class="share-count">+1</span>
+					    </a>
+
+					</div>
+
+
+
+	                <div class="recentarticle">	
+						<h2>Artikel Terkait tes : </h2>    
+						<ul class="recentarticle">
+
+							<?php $recent = get_dir_related_post('product',$this->template->dir->post_category,$this->template->dir->ID);?>
+							<?php if(!empty($recent)): foreach($recent as $rec):?>
+								<li><img src="<?php echo get_thumb($rec->post_image, 165, 125, 3);?>" class="recentthumb" /><h5><a href="<?php echo base_url().'dir/produk/id/'.$rec->ID.'/'.$rec->post_name;?>"><?php echo $rec->post_title;?></a></h5></li>							
+							<?php endforeach;endif;?>
+
+						</ul>
+						<div class="clear"></div>
+					</div>
+
+                </div>
+				
+				
+			</div>
+			<!-- start blog_sidebar -->
+			<?php echo get_template('dir/sidebar', TRUE);?>
+		<div class="clear"></div>
+		</div>
+	</div>
+</div>
+</div>
+
+<?php echo get_template('dir/footer',TRUE);?>
